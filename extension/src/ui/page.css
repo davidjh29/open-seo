@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light dark;
+  font:
+    14px/1.5 system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+body {
+  margin: 0;
+  padding: 16px;
+}
+h1 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: 600;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  font: inherit;
+}
+button {
+  font: inherit;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0;
+}
+.hint {
+  color: GrayText;
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
