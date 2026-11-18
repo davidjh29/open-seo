@@ -39,11 +39,17 @@ export type MetricsProvider = {
   getBulkMetrics(
     targets: { domains: string[]; urls: string[] },
     locale: Locale,
-  ): Promise<Priced<BulkMetrics>>;
+  ): Promise<Priced<BulkMetrics> & { warnings: string[] }>;
   getKeywordOverview(
     keyword: string,
     locale: Locale,
   ): Promise<Priced<KeywordMetrics | null>>;
+};
+
+/** What the toolbar shows for one search result. */
+export type ResultMetrics = {
+  domain: DomainMetrics | null;
+  page: PageMetrics | null;
 };
 
 /** The slice of chrome.storage.local the toolbar uses; faked in tests. */
